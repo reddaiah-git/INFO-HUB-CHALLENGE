@@ -1,8 +1,3 @@
-const express = require("express");
-const app = express();
-
-app.get("/api/weather", (req, res) => {
-  res.json({ forecast: "Sunny and 25°C" });
-});
-
-module.exports = app; // ✅ required for Vercel
+export default function handler(req, res) {
+  res.status(200).json({ forecast: "Sunny and 25°C from Vercel!" });
+}
